@@ -1,0 +1,3 @@
+cluster,jumlah_observasi,mean_silhouette,min_silhouette,jumlah_negatif,jumlah_mendekati_nol
+0,36,0.4730962663502561,-0.03411491089028331,1,2
+1,34,0.7432209789205176,0.27540276567369737,0,0

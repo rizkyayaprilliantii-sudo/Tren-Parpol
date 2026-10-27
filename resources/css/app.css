@@ -1,0 +1,49 @@
+/*
+ * resources/css/app.css  —  untuk Tailwind v3
+ * Pasangan: tailwind.config.js (warna navy, cream, gold, gold-soft, maroon, slate, ink + font)
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F4F1E8; /* cream */
+        color: #1B2A41;            /* navy  */
+        -webkit-font-smoothing: antialiased;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+        outline: 3px solid #C9A24B; /* gold */
+        outline-offset: 3px;
+    }
+}
+
+@layer utilities {
+    /* Garis-garis "tally" di hero. Bisa dipadukan dengan opacity-40 / opacity-10 */
+    .bg-tally-lines {
+        background-image: repeating-linear-gradient(
+            100deg,
+            rgba(227, 200, 120, 0.12) 0px,
+            rgba(227, 200, 120, 0.12) 1px,
+            transparent 1px,
+            transparent 28px
+        );
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
